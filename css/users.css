@@ -1,0 +1,87 @@
+form .submit-btn{
+    width:100%;
+    height: 30px;
+    font-size: 18px;
+    background-color:black;
+    color: white;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:rgb(238, 237, 237);
+    font-family: 'Yanone Kaffeesatz', sans-serif;  
+}
+::placeholder{
+    font-family: 'Yanone Kaffeesatz', sans-serif;  
+}
+input{
+    height:20px;
+    border: 1px solid;
+    border-radius:5px;
+}
+.field{
+   padding: 3px;
+}
+.header{
+    font-size: 20px;
+    font-weight:700;
+}
+.wrapper{
+    box-shadow: 1px 1px 5px 1px;
+    border-radius: 10px;
+    background-color:white;
+    width: 800px;
+}
+.form{
+    padding: 10px;
+}
+.form .error-message{
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    color: red;
+    border: 1px solid;
+    border-color: rgb(252, 199, 199);
+    background:rgb(252, 232, 232);
+    height: 30px;
+    font-size: 15px;
+}
+
+.login-now{
+    display: flex;
+    justify-content:center;
+}
+
+.name-field{
+    display: flex;
+    flex-direction: row; 
+}
+
+.field{
+    display: flex;
+    flex-direction:column;
+    position: relative;
+}
+
+.field .img{
+    border:none
+}
+
+.far{
+    position:absolute;
+    right: 15px;
+    top:30px;
+    color:#ccc;
+}
+.far:hover{
+    color: black;
+}
+
+
+
+
+
+

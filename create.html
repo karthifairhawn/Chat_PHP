@@ -4,9 +4,6 @@
     <link rel="stylesheet" href="css/login.css">  
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">  
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
-
     
 
 </head>
@@ -20,6 +17,18 @@
             <div class="field error-message">
                 <label>Error Message</label>
             </div>
+            <div class="name-field">
+                <div class="field">
+                    <label class="field ">First Name</label>            
+                    <input type="text " class="field name-field-in" placeholder="First Name">
+                </div>
+
+                <div class="field">
+                    <label class="field">Last Name</label>
+                    <input type="text" class="field name-field-in" placeholder="Last Name">
+                </div>
+            </div>
+
             <div class="field">
                 <label class="field">Email</label>
                 <input type="email" class="field" placeholder="Email">
@@ -28,19 +37,19 @@
             <div class="field">
                 <label class="field">Password</label>                        
                 <input type="password" class="field" placeholder="Password">
-                <i class="far fa-eye"></i>
-
-                
             </div>
 
-
+            <div class="field">
+                <label class="field ">Select Image</label>    
+                <input class="img" type="file">
+            </div>
             <div class="field submit">
                 <input type="submit" class  ="submit-btn" value="Chat Now!">
             </div>
             <hr>
             
             <div class="field login-now">
-                Don't have an account ? <a href="login_old.html"> Create Now</a>
+                Already have an account ? <a> Login Now</a>
             </div>
         
         </form>
