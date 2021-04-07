@@ -17,71 +17,130 @@ body{
 ::placeholder{
     font-family: 'Yanone Kaffeesatz', sans-serif;  
 }
-input{
-    height:20px;
-    border: 1px solid;
-    border-radius:5px;
-}
-.field{
-   padding: 3px;
-}
-.header{
-    font-size: 20px;
-    font-weight:700;
-}
+
+
+
 .wrapper{
     box-shadow: 1px 1px 5px 1px;
     border-radius: 10px;
     background-color:white;
-    width: 800px;
-}
-.form{
-    padding: 10px;
-}
-.form .error-message{
-    display: flex;
-    justify-content: center;  
-    align-items: center;  
-    color: red;
-    border: 1px solid;
-    border-color: rgb(252, 199, 199);
-    background:rgb(252, 232, 232);
-    height: 30px;
-    font-size: 15px;
+    width: 400px;
+    padding:20px;
 }
 
-.login-now{
-    display: flex;
-    justify-content:center;
+.own-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
 
-.name-field{
+.header{
     display: flex;
-    flex-direction: row; 
-}
-
-.field{
-    display: flex;
-    flex-direction:column;
+    margin-left: 10px;
+    height:40px;
     position: relative;
 }
 
-.field .img{
-    border:none
+.name_status{
+    display: flex;
+    flex-direction:column;
+    margin-left: 15px;
+    color:black;
+    
+}
+.own-name{
+    font-size:24px;
+    font-weight:600;
+}
+.own-status{
+    color: black;  
+    
 }
 
-.far{
+.logout-btn{ 
+    margin-top: 5px;;
     position:absolute;
-    right: 15px;
-    top:30px;
+    right: 0;
+    height: 30px;
+    width:80px;
+}
+
+input[type="button"]{
+    font-family: 'Yanone Kaffeesatz', sans-serif;  
+    font-size:20px;
+    background-color: #333;
+    color:white;
+    font-weight:600;
+  }
+
+  .content{
+      display: flex;
+      
+  }
+.search-box{
+    width:88%;
+    height:30px;
+    border-color: #ccc;
+    outline:none;
+    margin-bottom: 10px;
+}
+
+.search-icon{
+    height:34px;
+    display:flex;
+    position: relative;
+    border: 2px solid;
+    width:30px;
+    background:#333;
+    color:rgb(231, 230, 230);
+    font-size:20px;
+    border-radius:0 8px 8px 0;
+    
+
+
+}
+.fa-search{
+    margin-left: 20%;
+    margin-top: 20%;
+    outline: none;
+
+}
+
+.fa-search:hover{
+    color: white;
+    cursor: pointer;
+}
+.users-list{
+    position: relative;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.users-list::-webkit-scrollbar{
+    width:0px;
+
+}
+.user-child{
+    padding:5px;
+    position:relative;
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    border-color: #ccc;
+    border-width: 2px;
+}
+.users-status{
+    font-size: 10px;
+    position: absolute;
+    right: 17px;
+    top: 20px;
+    color:green;
+}
+.users-status-off{
     color:#ccc;
-}
-.far:hover{
-    color: black;
+
 }
 
-
-
-
-
-
+.users-list hr{
+    color:red;
+}
