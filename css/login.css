@@ -18,8 +18,9 @@ body{
     font-family: 'Yanone Kaffeesatz', sans-serif;  
 }
 input{
-    height:20px;
+    height:30px;
     border: 1px solid;
+    outline: none;
     border-radius:5px;
 }
 .field{
@@ -79,7 +80,6 @@ input{
 .far:hover{
     color: black;
 }
-
 
 
 
