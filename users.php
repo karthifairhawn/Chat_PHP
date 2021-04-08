@@ -12,13 +12,13 @@
 <body>
     <div class="wrapper">
         <form action="#" class="form">
-            <div class="header">
-                <img class="own-img" src="img/face.jpg">
-                <div class="name_status">
-                    <span class="own-name">John Smith</span>
-                    <span class="own-status">Active Now</span>
-                </div>                
-                <input type="button" class="logout-btn" value="LOG OUT">                                                
+            <div class="header">                
+                    <img class="own-img" src="img/face.jpg">
+                    <div class="name_status">
+                        <span class="own-name">John Smith</span>
+                        <span class="own-status">Active Now</span>
+                    </div>                            
+                    <input type="button" class="logout-btn" value="LOG OUT">                                                                
             </div>
             <hr>
             <div class="content">
@@ -31,7 +31,18 @@
 
 
             <!-- Users List -->
-            <div class="users-list">
+            <div class="user-body">
+                <a href="#" class="user-child">
+                    <img class="own-img" src="img/img2.jpeg">
+                    <div class="name_status">
+                        <span class="own-name">John Smith</span>
+                        <span class="own-status user-one-mesans">The Message was send.</span>
+                    </div>   
+                    <div class="users-status">
+                        <i class="fas fa-circle"></i>
+                    </div> 
+                       
+                </a>
                 <a href="" class="user-child">
                     <img class="own-img" src="img/img2.jpeg">
                     <div class="name_status">
@@ -44,6 +55,26 @@
                        
                 </a>
 
+                <a href="" class="user-child">
+                    <img class="own-img" src="img/img2.jpeg">
+                    <div class="name_status">
+                        <span class="own-name">John Smith</span>
+                        <span class="own-status user-one-mesans">The Message was send.</span>
+                    </div>   
+                    <div class="users-status">
+                        <i class="fas fa-circle"></i>
+                    </div>            
+                </a>
+                <a href="" class="user-child">
+                    <img class="own-img" src="img/img2.jpeg">
+                    <div class="name_status">
+                        <span class="own-name">John Smith</span>
+                        <span class="own-status user-one-mesans">The Message was send.</span>
+                    </div>   
+                    <div class="users-status">
+                        <i class="fas fa-circle"></i>
+                    </div>            
+                </a>
                 <a href="" class="user-child">
                     <img class="own-img" src="img/img2.jpeg">
                     <div class="name_status">

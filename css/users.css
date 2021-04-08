@@ -26,7 +26,7 @@ body{
     background-color:white;
     width: 400px;
     padding:20px;
-    min-width: 200px;
+    
 }
 
 .own-img{
@@ -37,6 +37,7 @@ body{
 
 .header{
     display: flex;
+    justify-content:space-between;
     margin-left: 10px;
     height:40px;
     position: relative;
@@ -60,9 +61,8 @@ body{
 
 .logout-btn{ 
     display: flex;
-    margin-top: 5px;;
-    position:absolute;
-    right: 0;
+    margin-top: 5px;
+    
     height: 30px;
     width:80px;
 }
@@ -131,11 +131,7 @@ input[type="button"]{
 
 
 }
-.users-list{
-    position: relative;
-    max-height: 300px;
-    overflow-y: auto;
-}
+
 .users-list::-webkit-scrollbar{
     width:0px;
 
@@ -162,12 +158,19 @@ input[type="button"]{
 
 }
 
-.users-list hr{
-    color:red;
-}
 
 .search-child-2{
     font-size: 18px;
     color:black;
     font-weight:600;
+}
+
+.user-body{
+    position: relative;
+    max-height: 400px;
+    overflow-y:scroll;
+}
+
+.user-body::-webkit-scrollbar{
+    width: 0;
 }

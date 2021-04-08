@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <html>
 <head>
     <title>Create Account</title>
@@ -12,7 +28,7 @@
 
 <body>
     <div class="wrapper">
-        <form action="#" class="form">
+        <form action="index.php" method="POST" class="form">
             <label class="header">Chat App</label>
             <hr>
             <div class="field error-message">
@@ -20,7 +36,7 @@
             </div>
             <div class="field">
                 <label class="field">Email</label>
-                <input type="email" class="field" placeholder="Email">
+                <input type="email" class="field" placeholder="Email" required>
             </div>
 
             <div class="field">
@@ -36,7 +52,7 @@
             <hr>
             
             <div class="field login-now">
-                Don't have an account ? <a href="create.html"> Create Now</a>
+                Don't have an account ? <a href="create.php"> Create Now</a>
             </div>
         
         </form>
