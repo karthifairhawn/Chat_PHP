@@ -26,6 +26,7 @@ body{
     background-color:white;
     width: 400px;
     padding:20px;
+    min-width: 200px;
 }
 
 .own-img{
@@ -58,6 +59,7 @@ body{
 }
 
 .logout-btn{ 
+    display: flex;
     margin-top: 5px;;
     position:absolute;
     right: 0;
@@ -73,42 +75,61 @@ input[type="button"]{
     font-weight:600;
   }
 
-  .content{
-      display: flex;
+
+
+.content{
+    display: flex;
+    position: relative;
+    height:40px;
+    align-items: center;
+    justify-content: center;
       
   }
 .search-box{
-    width:88%;
+    position: absolute;
+    width : calc(100% - 50px);
     height:30px;
     border-color: #ccc;
     outline:none;
-    margin-bottom: 10px;
+    
+    opacity:0;
+    pointer-events: none;
+    
+}
+
+.content input.active{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .search-icon{
-    height:34px;
+    
+    justify-content: center;
+    height:35px;
     display:flex;
-    position: relative;
+    align-items:center;
+    position: absolute;
     border: 2px solid;
-    width:30px;
-    background:#333;
-    color:rgb(231, 230, 230);
+    width:50px;
+    background:rgb(231, 230, 230);
+    color:#333;
     font-size:20px;
     border-radius:0 8px 8px 0;
+    right:0;
     
+}
 
-
+.active-search-icon{
+    background:#333;
+    color:rgb(231, 230, 230);
 }
 .fa-search{
-    margin-left: 20%;
-    margin-top: 20%;
     outline: none;
+   
 
 }
 
-.fa-search:hover{
-    color: white;
-    cursor: pointer;
+
 }
 .users-list{
     position: relative;
@@ -143,4 +164,10 @@ input[type="button"]{
 
 .users-list hr{
     color:red;
+}
+
+.search-child-2{
+    font-size: 18px;
+    color:black;
+    font-weight:600;
 }

@@ -11,5 +11,3 @@ toggleBtn.onclick = ()=>{
     };
 };
 
-// Pass Hide and Show Button End --------------------------------
-
