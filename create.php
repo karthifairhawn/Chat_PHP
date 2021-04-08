@@ -8,10 +8,11 @@
    
 
     if(isset($_POST['s_name'])){
+        echo $_POST['s_name'];
         if(empty($_POST['s_name'])){
             $error=true;            
         }else{
-            $fname = $_POST['s_name'];            
+            $fname = mysqli_real_escape_string($conn,$_POST['s_name']);
         }
     }
     
@@ -19,7 +20,7 @@
         if(empty($_POST['lname'])){
             $error=true;
         }else{
-            $lname = $_POST['lname'];
+            $lname = mysqli_real_escape_string($conn,$_POST['lname']);
         }
     }
 
@@ -27,7 +28,7 @@
         if(empty($_POST['email'])){
             $error=true;
         }else{
-            $email = $_POST['email'];
+            $email = mysqli_real_escape_string($conn,$_POST['email']);
             $fetch_all_email = mysqli_query($conn,"SELECT * FROM user_info WHERE email = '$email'");
             if(mysqli_num_rows($fetch_all_email)>0){
                 $error=true;
@@ -42,17 +43,17 @@
         if(empty($_POST['pass'])){
             $error=true;
         }else{
-            $pass = $_POST['pass'];
+            $pass = mysqli_real_escape_string($conn,$_POST['pass']);
         }
     }
 
     if(isset($_POST['submit'])){
         if(isset($_FILES['file'])){
-            $img_name = $_FILES['file']['name'];
-            $img_type = $_FILES['file']['type'];
-            $img_temp_name = $_FILES['file']['tmp_name'];
-            $img_explode = explode(".",$img_name);
-            $img_ext = end($img_explode);
+            $img_name =  mysqli_real_escape_string($conn,$_FILES['file']['name']);
+            $img_type =  mysqli_real_escape_string($conn,$_FILES['file']['type']);
+            $img_temp_name =  mysqli_real_escape_string($conn,$_FILES['file']['tmp_name']);
+            $img_explode =  explode(".",$img_name);
+            $img_ext =  end($img_explode);
             
 
             $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif');
@@ -123,7 +124,7 @@
                
                 <div class="field">
                     <label class="field ">First Name</label>            
-                    <input type="text" name="s_name" id="fname" class="field name-field-in" placeholder="First Name" required>
+                    <input type="text" name="s_name" id="s_name" class="field name-field-in" placeholder="First Name" required>
                 </div>
 
                 <div class="field">
