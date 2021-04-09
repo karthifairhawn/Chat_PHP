@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $error_data="";
     include "php/db_conn.php" ;
     $fname = $lname = $email = $pass = '';
@@ -51,7 +52,7 @@
         if(isset($_FILES['file'])){
             $img_name =  mysqli_real_escape_string($conn,$_FILES['file']['name']);
             $img_type =  mysqli_real_escape_string($conn,$_FILES['file']['type']);
-            $img_temp_name =  mysqli_real_escape_string($conn,$_FILES['file']['tmp_name']);
+            $img_temp_name =  $_FILES['file']['tmp_name'];
             $img_explode =  explode(".",$img_name);
             $img_ext =  end($img_explode);
             
@@ -62,6 +63,8 @@
                 $time = time();
                 $new_img_name = $time.$img_name;
                 move_uploaded_file($img_temp_name,"img/user_images/".$new_img_name);
+                  
+                
             }else{
                 $error_data=$error_data." "."Please upload 'jpg', 'jpeg', 'png' or 'gif'";
             }
@@ -71,7 +74,7 @@
     }
 
     if(isset($_POST['submit']) && $error==false){
-        $query = "INSERT INTO user_info(id,fname,lname,email,pass,a_status,image) VALUES('$random_id','$fname','$lname','$email','$pass','active','$new_img_name')";
+        $query = "INSERT INTO user_info(id,fname,lname,email,pass,a_status,image) VALUES('$random_id','$fname','$lname','$email','$pass','Active Now','$new_img_name')";
         if (mysqli_query($conn,$query)){
             $query_2 = mysqli_query($conn, "SELECT * FROM user_info WHERE email='$email'");
             $query_2_res = mysqli_fetch_assoc($query_2);

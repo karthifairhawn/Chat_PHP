@@ -1,4 +1,5 @@
 <?php
+session_start();
 $error_data="";
 
 if(isset($_POST['submit'])){
@@ -11,6 +12,8 @@ if(isset($_POST['submit'])){
         $query_1_res_ass = mysqli_fetch_assoc($query_1_res);
         if($query_1_res_ass>0){
             $_SESSION['id'] =  $query_1_res_ass['id'];   
+            $set_active_query = "UPDATE user_info SET a_status='Active Now' WHERE id={$query_1_res_ass['id']}";
+            mysqli_query($conn,$set_active_query);
             header("Location:users.php");
         }else{
             $error_data = "Email or Password Incorrect";            

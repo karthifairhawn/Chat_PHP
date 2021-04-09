@@ -88,10 +88,9 @@ input[type="button"]{
 .search-box{
     position: absolute;
     width : calc(100% - 50px);
-    height:30px;
+    height:35px;
     border-color: #ccc;
     outline:none;
-    
     opacity:0;
     pointer-events: none;
     
@@ -123,12 +122,9 @@ input[type="button"]{
     background:#333;
     color:rgb(231, 230, 230);
 }
-.fa-search{
-    outline: none;
-   
-
+.active-search-logo{
+    opacity: 0;
 }
-
 
 }
 
@@ -174,3 +170,17 @@ input[type="button"]{
 .user-body::-webkit-scrollbar{
     width: 0;
 }
+
+
+.x_mark{
+    position: absolute;
+    color:white;
+    opacity: 0;
+}
+
+.x_mark-active{
+    position: absolute;
+    color:white;
+    opacity: 1;
+}
+
