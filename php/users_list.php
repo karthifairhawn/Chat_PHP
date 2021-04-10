@@ -8,7 +8,7 @@
         echo "No user data found";
     }elseif(mysqli_num_rows($select_users_query_res)>0){
         while($row=mysqli_fetch_assoc($select_users_query_res)){
-            $output.='<a href="#" class="user-child">
+            $output.='<a href="chat_area.php?userid='.$row['id'].'" class="user-child">
                     <img class="own-img" src="img/user_images/'.$row['image'].'">
                     <div class="name_status">
                         <span class="own-name">'.$row['fname'].' '.$row['lname'].'</span>

@@ -9,10 +9,6 @@ if(!isset($_SESSION['id'])){
     $query_1_res = mysqli_query($conn,$query);
     $query_1_res_ass = mysqli_fetch_assoc($query_1_res);
 
-
-
-    // $select_users_query = "SELECT * FROM user_info WHERE 1=1";
-    // $select_users_query_res = mysqli_query($conn,$select_users_query);
      
 }
 

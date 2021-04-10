@@ -1,3 +1,32 @@
+<?php 
+session_start();
+
+include 'php/db_conn.php';
+if(!isset($_GET['userid'])){
+    header('Location:index.php');
+}else{
+    $userid = mysqli_real_escape_string($conn,$_GET['userid']);
+    $fetch_user_details = mysqli_query($conn,"SELECT * FROM user_info WHERE id='$userid'");
+    $fetch_user_details_res= mysqli_fetch_assoc($fetch_user_details);
+    
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <html>
 <head>
     <title>Create Account</title>
@@ -11,16 +40,16 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="#" class="form">
+        
             <div class="header">
-                <i class="fas fa-arrow-left	"></i>
-                <img class="own-img" src="img/img2.jpeg">
+                <a href="users.php"><i class="fas fa-arrow-left	"></i></a>
+                <img class="own-img" src="img/user_images/<?php echo $fetch_user_details_res['image']?>">
                 <div class="name_status">
-                    <span class="own-name">John Smith</span>
-                    <span class="own-status">Active Now</span>
+                    <span class="own-name"><?php echo $fetch_user_details_res['fname']?></span>
+                    <span class="own-status"><?php echo $fetch_user_details_res['a_status']?></span>
                 </div>                                
             </div>
-            <hr>
+            
             <!-- Chat Area -->
             <div class="chat-box">
                 <div class="chat-outgoing">
@@ -28,60 +57,27 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                     </div>
                 </div>
-                <div class="chat-incoming">
-                    <img class="inc-img" src="img/face.jpg">
-                    <div class="details">
-                        <p>Loorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat-outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat-incoming">
-                    <img class="inc-img" src="img/face.jpg">
-                    <div class="details">
-                        <p>Loorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat-outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat-incoming">
-                    <img class="inc-img" src="img/face.jpg">
-                      <div class="details">
-                        <p>Loorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat-outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat-incoming">
-                    <img class="inc-img" src="img/face.jpg">
-                    <div class="details">
-                        <p>Loorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
+                
             </div>
 
-            <form class="send-text" action="#">
-                <div class="send-msg-area">
-                    <input type="text" class="send-msg" placeholder="Enter text to send">
-                    <button type="submit" class="send-msg-btn" ></button>
-                    <i class="fab fa-telegram"></i>
+            <form id="msg-form" autocomplete=off>
+            
+                <div class="send-msg-area">                    
+                    <input name="outgoing_id" id="outgoing_id" type="text" value="<?php echo $_SESSION['id']?>" hidden>
+                    <input name="incoming_id"  id="incoming_id" type="text" value="<?php echo $userid?>" hidden>
+                    <input name="message" type="text" id="send-msg" class="send-msg" placeholder="Enter text to send">
+                    <button name="submit" type="submit" id="send-msg-btn" class="send-msg-btn"><i class="fab fa-telegram"></i></button>
+                    </div>
                 </div>
             </form>
             
             <!-- Chat Area End-->
             
             
-        </form>
+            <script src="js/chat.js"></script>
+            <script src="js/update_chat.js"></script>
     </div>
+    
 </body>
 
 
