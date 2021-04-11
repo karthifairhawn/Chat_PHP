@@ -51,13 +51,17 @@ if(!isset($_GET['userid'])){
             </div>
             
             <!-- Chat Area -->
-            <div class="chat-box">
+            <div class="chat-box" id="chat-box">
                 <div class="chat-outgoing">
                     <div class="details">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                     </div>
                 </div>
-                
+                <div class="chat-incoming">
+                    <div class="details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    </div>
+                </div>
             </div>
 
             <form id="msg-form" autocomplete=off>

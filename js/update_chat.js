@@ -1,8 +1,7 @@
 var ot_id_box = document.getElementById("outgoing_id");
 var in_id_box = document.getElementById("incoming_id");
+var chatBox = document.getElementById("chat-box");
 
-var data = {"ot_id":ot_id_box.value,"in_id":in_id_box.value}
-var jsonString = JSON.stringify(data);
 
 
 setInterval(()=>{
@@ -13,6 +12,7 @@ setInterval(()=>{
             if(xhr.status === 200){
                 let data1 = xhr.response;
                 console.log(data1);
+                chatBox.innerHTML=data1;
         }
     }
 }    
