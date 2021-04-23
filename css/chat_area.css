@@ -85,16 +85,19 @@ body{
 
 .chat-outgoing p{
     word-wrap: break-word;
-    padding: 5px;
+    padding: 1px;
+    
     
 }
 .chat-outgoing .details{
     margin-left: auto;
     max-width: calc(100% - 80px);
+    /* width */
     display: flex;
     background: #333;
     border-radius: 22px 22px 0px 22px;
     color:#fff;
+    word-wrap: break-word;
 }
 
 .chat-incoming{

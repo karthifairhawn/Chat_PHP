@@ -152,7 +152,7 @@ input[type="button"]{
     border-color: #ccc;
     border-width: 2px;
 }
-.users-status{
+.users-status-active-s{
     font-size: 10px;
     position: absolute;
     right: 17px;
@@ -160,6 +160,10 @@ input[type="button"]{
     color:green;
 }
 .users-status-off{
+    font-size: 10px;
+    position: absolute;
+    right: 17px;
+    top: 20px;
     color:#ccc;
 
 }

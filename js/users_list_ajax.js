@@ -10,6 +10,7 @@ setInterval(()=>{
                 let data = xhr.response;
                 if(!searchBox.classList.contains("active")){
                     user_body.innerHTML = data;
+                    console.log(data);
                 }
         }
     }
