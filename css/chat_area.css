@@ -12,10 +12,13 @@ body{
     align-items: center;
     min-height: 100vh;
     background-color:rgb(238, 237, 237);
-    font-family: 'Yanone Kaffeesatz', sans-serif;  
+    font-family: 'Varela Round', sans-serif;
+    background-image: url('../img/bg-main.png');
+    /* font-family: 'Yanone Kaffeesatz', sans-serif;   */
 }
 ::placeholder{
-    font-family: 'Yanone Kaffeesatz', sans-serif;  
+    font-family: 'Varela Round', sans-serif;
+    /* font-family: 'Yanone Kaffeesatz', sans-serif;   */
 }
 
 
@@ -24,7 +27,7 @@ body{
     box-shadow: 5px 5px 5px #aaaaaa;
     border-radius: 10px;
     background-color:white;
-    width: 400px;
+    
     
 }
 
@@ -54,7 +57,7 @@ body{
 }
 .own-name{
     font-size:24px;
-    font-weight:600;
+    font-weight:500;
 }
 .own-status{
     color: black;  
@@ -73,59 +76,52 @@ body{
 }
 
 .chat-box{
+    display:flex;
+    width:330px;
+    position: relative;
+    flex-direction:column;
     margin-top: -7px;
     overflow-y: auto;
     height: 400px;
     background: #f1f1f1;
-    padding: 10px 30px 20px 30px;
+    padding: 10px 20px 20px 30px;
     font-size: 15px;
     box-shadow: 0px -1px 2px #aaaaaa;
+    background-image: url("../img/bg.png");
+}
+
+
+.chat-incoming P{
+    margin:4px;
+    position: relative;
+    padding-top: 0px;
+    padding: 7px 7px 7px 7px;
+    border: 1px solid;
+    border-radius: 0px 10px 10px 10px;
+    width:fit-content;
+    max-width: calc(100% - 35%);
+    background-color: #fff;
     
 }
 
-.chat-outgoing p{
-    word-wrap: break-word;
-    padding: 1px;
-    
-    
-}
-.chat-outgoing .details{
+.chat-outgoing P{
+    margin:4px;
     margin-left: auto;
-    max-width: calc(100% - 80px);
-    /* width */
-    display: flex;
-    background: #333;
-    border-radius: 22px 22px 0px 22px;
-    color:#fff;
+    padding: 7px 7px 7px 7px;
+    border: 1px solid;
+    border-radius: 10px 10px 0px 10px;
+    width:fit-content;
+    max-width: calc(100% - 35%);  
+    background-color: #e2ffc7;
+}
+
+
+p{
     word-wrap: break-word;
 }
 
-.chat-incoming{
-    margin-top: 13px;
-    margin-bottom: 13px;
-    display: flex;
-    align-items: flex-end;
-}
-.chat-incoming p{
-    word-wrap: break-word;
-    padding: 5px;
-    font-weight: 600;
-    color:black
-}
 
-.chat-incoming .details{
-    margin-left: 5px;
-    
-    background: #fff;
-    border-radius: 18px 18px 18px 0px;
-    margin-right: auto;
-    max-width: calc(100% - 80px);
-}
-.inc-img{
-    height:35px;
-    width:35px;
-    border-radius:30px;
-}
+
 
 .send-msg-area{
     display: flex;

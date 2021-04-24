@@ -18,7 +18,6 @@ window.onload = function(){
                 if(xhr.status === 200){
                     let data = xhr.response;
                     messageBox.value ="";
-                    console.log(data);
             }
         }
     }   

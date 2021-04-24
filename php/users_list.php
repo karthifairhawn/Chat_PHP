@@ -47,7 +47,7 @@
                         <span class="own-status user-one-mesans">'.$you.$last_msg_to_show.'</span>
                     </div>   
                     <div class="users-status'.$status.'">
-                        <i class="fas fa-circle"></i>
+                        <i class="fa fa-circle"></i>
                     </div>     
                     </a>';
         }

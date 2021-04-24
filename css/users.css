@@ -11,11 +11,13 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color:rgb(238, 237, 237);
-    font-family: 'Yanone Kaffeesatz', sans-serif;  
+    background-image: url('../img/bg-main.png');
+    font-family: 'Varela Round', sans-serif;
+    /* font-family: 'Yanone Kaffeesatz', sans-serif;   */
 }
 ::placeholder{
-    font-family: 'Yanone Kaffeesatz', sans-serif;  
+    font-family: 'Varela Round', sans-serif;
+    /* font-family: 'Yanone Kaffeesatz', sans-serif;   */
 }
 
 
@@ -55,8 +57,7 @@ body{
     
 }
 .own-name{
-    font-size:24px;
-    font-weight:600;
+    font-size:21px;
 }
 .own-status{
     color: black;  
@@ -66,17 +67,15 @@ body{
 .logout-btn{ 
     display: flex;
     margin-top: 5px;
-    
     height: 30px;
     width:80px;
 }
 
 input[type="button"]{
     font-family: 'Yanone Kaffeesatz', sans-serif;  
-    font-size:20px;
+    font-size:15px;
     background-color: #333;
     color:white;
-    font-weight:600;
     
   }
 
@@ -172,7 +171,7 @@ input[type="button"]{
 .search-child-2{
     font-size: 18px;
     color:black;
-    font-weight:600;
+    font-weight:500;
     
 }
 

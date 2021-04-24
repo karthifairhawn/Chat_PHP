@@ -29,10 +29,10 @@ if(!isset($_GET['userid'])){
 
 <html>
 <head>
-    <title>Create Account</title>
+    <title>Chat</title>
     <link rel="stylesheet" href="css/chat_area.css">  
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 
@@ -52,15 +52,11 @@ if(!isset($_GET['userid'])){
             
             <!-- Chat Area -->
             <div class="chat-box" id="chat-box">
-                <div class="chat-outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
+                <div class="chat-outgoing">                    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>                    
                 </div>
-                <div class="chat-incoming">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
+                <div class="chat-incoming">                    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>                    
                 </div>
             </div>
 
