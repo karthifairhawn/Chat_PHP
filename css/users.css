@@ -11,6 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-y:hidden;
     background-image: url('../img/bg-main.png');
     font-family: 'Varela Round', sans-serif;
     /* font-family: 'Yanone Kaffeesatz', sans-serif;   */

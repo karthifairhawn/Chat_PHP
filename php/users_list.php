@@ -10,12 +10,15 @@
         echo "No user data found";
     }elseif(mysqli_num_rows($select_users_query_res)>0){
         while($row=mysqli_fetch_assoc($select_users_query_res)){
-            $row_id = $row['id'];            
+            $row_id = $row['id'];       // Iterating ID     
+            $you='';
+
+            
             $last_message_query = "SELECT * FROM messages WHERE 
-            incoming_msg_id= '$row_id' OR 
-            outgoing_msg_id='$row_id' AND 
-            (incoming_msg_id='$logged_in_user_id' OR 
-            incoming_msg_id='$logged_in_user_id') 
+            (outgoing_msg_id = $row_id AND
+            incoming_msg_id = $logged_in_user_id) OR
+            (outgoing_msg_id = $logged_in_user_id AND
+            incoming_msg_id = $row_id)
             ORDER BY id desc LIMIT 1";
 
             $last_message_query_exec = mysqli_query($conn,$last_message_query);
@@ -29,14 +32,22 @@
                 }else{
                     $last_msg_to_show = $last_message_query_exec_result['message'];
                 }
+                if($logged_in_user_id == $last_message_query_exec_result['outgoing_msg_id']){
+                    $you = 'You: ';
+                }else{
+                    $you = '';
+                }
             }
-                
-            ($logged_in_user_id = $row_id) ? $you = "You: " : $you ="";
+
+            
+
+            
             if($row['a_status'] == "Active Now"){
                  $status='-active-s';
             }else{
                 $status="-off";
             } 
+            
             
             
 

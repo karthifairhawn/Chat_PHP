@@ -11,6 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-y: hidden;
     background-color:rgb(238, 237, 237);
     font-family: 'Varela Round', sans-serif;
     background-image: url('../img/bg-main.png');
@@ -130,19 +131,17 @@ p{
     position: relative;
 }
 .send-msg{
-    width: calc(100% - 50px);
+    width: calc(100% - 40px);
     height:37px;
 }
 
 
 .fa-telegram{
-    border: 1px solid;
+    
     padding: 5px;
     color:white;
-    background: #333;
-    
-    right:15px;
-    font-size: 28px;
+    right:0;
+    font-size: 24px;
     cursor:pointer;
 }
 
@@ -153,7 +152,9 @@ p{
 
 
 .send-msg-btn{
+    background: #333;
     padding:0px;
     margin:0px;
+    border-radius: 0px 5px 5px 0px;
     
 }
