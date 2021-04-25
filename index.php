@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 $error_data="";
 
@@ -44,6 +45,7 @@ if(isset($_POST['submit'])){
 
 <html>
 <head>
+    <?php include 'note.php'; ?>
     <title>Create Account</title>
     <link rel="stylesheet" href="css/login.css">    
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -52,7 +54,6 @@ if(isset($_POST['submit'])){
 
 
 </head>
-
 
 <body>
     <div class="wrapper">
@@ -96,9 +97,32 @@ if(isset($_POST['submit'])){
         }
 
     </script>
-
 </body>
 
 
 
+
+<!-- Note Starts Here -->
+
+<div class="note">
+    <p>This app is build to make myself good in css and to know how actually php and mysql works..
+        the reason I'm saying this is because this app has N number of vulnerabilities so it is not for usage of designed idea but a model of that. Thanks for understanding
+    </p>
+</div>
+
+
+
+<style>
+    .note {
+        position: absolute;
+        border: 1px dashed;
+        width: 95%;
+        border-radius: 10px 10px 0px 0px;
+        padding: 4px;
+        Text-align: center;
+        bottom: 0px;
+        color: white;
+    }
+
+</style>
 </html>

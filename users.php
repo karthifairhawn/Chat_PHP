@@ -41,7 +41,7 @@ if(!isset($_SESSION['id'])){
                             <span class="own-status"><?php echo $query_1_res_ass['a_status']?></span>
                         </div>            
                     </div>                           
-                    <input type="button" class="logout-btn" value="LOG OUT">                                                                
+                    <a href="php/logout.php?user_id=<?php echo $_SESSION['id']?>"><input type="button" class="logout-btn" value="LOG OUT"></a>
             </div>
             <hr>
             <div class="content">

@@ -174,5 +174,39 @@
     </script>
 </body>
 
+<div class="note">
+    <p>This app is build to make myself good in css and to know how actually php and mysql works..
+        the reason I'm saying this is because this app has N number of vulnerabilities so it is not for usage of designed idea but a model of that. Thanks for understanding
+    </p>
+</div>
+<div class="note-button">
+        Important Note:
+    </div>
+
+
+<style>
+    .note-button{
+        position: absolute;
+        border: 1px solid;
+        border-radius: 5px 5px 0px 0px;
+        padding: 1px 7px 2px 7px;
+        Text-align: center;
+        bottom: 0px;
+        color: white;
+        background-color: red;
+    }
+    .note {
+        position: absolute;
+        border: 1px dashed;
+        width: 95%;
+        border-radius: 10px 10px 0px 0px;
+        padding: 4px;
+        Text-align: center;
+        bottom: 0px;
+        color: white;
+        opacity: 0;
+    }
+
+</style>
 
 </html>
